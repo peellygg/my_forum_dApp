@@ -231,9 +231,10 @@ export default function Home() {
           // (6) wait for transaction to be mined
           await provider.waitForTransaction(hash);
           // (7) display alert message
-          alert(`Transaction sent! Hash: ${hash}`);
-          //call getAllPosts function to refresh the current list of post
-          await getAllPosts();
+        }
+        alert(`Transaction sent! Hash: ${hash}`);
+        //call getAllPosts function to refresh the current list of post
+        await getAllPosts();
 
         //reset fields back to default values
         setPostTitle("");
